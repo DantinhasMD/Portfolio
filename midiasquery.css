@@ -1,0 +1,133 @@
+/**/
+@media (max-width: 768px) {
+    .nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #13293D;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav a {
+        margin: 15px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav.active {
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+    .home {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .content-home {
+        align-items: center;
+        text-align: right;
+    }
+
+    .home h1 {
+        font-size: 47px;
+    }
+
+    .home h3 {
+        font-size: 32px;
+    }
+
+    .home p {
+        font-size: 22px;
+        margin-left: 35%;
+    }
+
+    .icons-home a {
+        font-size: 33px;
+    }
+
+    #cv {
+        font-size: 25px;
+    }
+
+    #picture {
+        margin: 50px auto;
+        height: 435px;
+        width: 435px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .content-home {
+        align-items: center;
+        text-align: right;
+    }
+
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .home h3 {
+        font-size: 28px;
+    }
+
+    .home p {
+        font-size: 18px;
+    }
+
+    .icons-home a {
+        font-size: 26px;
+    }
+
+    #cv {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+
+    #picture {
+        margin-top: 50px;
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 30px;
+    }
+
+    .home h3 {
+        font-size: 20px;
+    }
+
+    .home p {
+        font-size: 14px;
+    }
+
+    .icons-home a {
+        font-size: 20px;
+    }
+
+    #cv {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    #picture {
+        margin-top: 40px;
+        height: 250px;
+        width: 250px;
+    }
+}
