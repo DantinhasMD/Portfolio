@@ -62,7 +62,7 @@ header {
 .home, .about, .portfolio, .services, .contact{
     display: flex;
     height: 100vh;
-    padding: 0 10%;
+    padding: 0 8%;
     background: linear-gradient(to left, #13293D 65%, #E8F1F2 35%);
     width: 100%;
 }
@@ -137,8 +137,8 @@ header {
 #picture {
     margin-top: 10%;
     background-color: #13293D;
-    height: 480px;
-    width: 480px;
+    height: 600px;
+    width: 600px;
     border-radius: 50%;
     border: 25px solid #E8F1F2;
     outline: 25px solid #13293D;
@@ -147,14 +147,16 @@ header {
 /* Seção - Esquerda */
 .content-left {
     padding-top: 10%;
+    padding-right: 5%;
     align-items: center;
     text-align: left;
-    width: 340px;
+    justify-content: center;
+    max-width: 320px;
 }
 
 .content-left h1 {
     color: #13293D;
-    font-size: 55px;
+    font-size: 50px;
     margin-bottom: 10px;
 }
 
@@ -174,7 +176,6 @@ header {
 .container-about {
     justify-content: space-around;
     flex-direction: row;
-    gap: 180px;
     align-items: center;
 }
 
@@ -187,7 +188,9 @@ header {
 .programming-skills {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+}
+
+.other-skills {
     margin-left: 15%;
 }
 
@@ -195,47 +198,56 @@ header {
     margin-top: 90px;
     color: #E8F1F2;
     font-size: 18px;
+    text-align: center;
+    justify-content: center;
     border-radius: 10px;
     width: 350px; 
+    height: 600px;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 15px;
 }
 
 .programming-skills h2, .other-skills h2 {
     font-size: 40px;
-    text-align: center;
+    margin-bottom: 14px;
 }
 
-.skill p, .skill-boxs p {
-    font-size: 20px;
-    margin: 0 0 5px 0;
+.skill p, .skill-box p {
+    font-size: 17px;
+    margin: 7px;
 }
 
-.skill {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 15px;
+.skill a {
+    color: #1B98E0;
+    text-decoration: none;
+}
+
+.skill a:hover {
+    color: #006494;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .icon-skill {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 2px;
 }
 
 .icon-skill i {
-    font-size: 40px;
+    font-size: 35px;
     color: #1B98E0;
 }
 
 .progress-bar {
     background-color: #E8F1F2;
     border-radius: 10px;
-    height: 30px;
+    height: 20px;
     width: 100%;
     position: relative;
     overflow: hidden;
-    margin-left: 10px;
+    margin-bottom: 15px;
 }
 
 .progress {
@@ -253,10 +265,6 @@ header {
     color: #006494;
     font-weight: bold;
     z-index: 1;
-}
-
-.other-skills .skill-box {
-    margin-bottom: 20px;
 }
 
 .skill-box h3 {
@@ -277,9 +285,7 @@ header {
 /* Seção - portfolio */
 .container-portfolio {
     justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 2%;
-    gap: 30px;
+    align-items: center;
 }
 
 #github {
@@ -295,7 +301,6 @@ header {
 }
 
 .carousel {
-    margin-top: 10%;
     flex: 1;
     margin-left: 15%;
     display: flex;
@@ -303,6 +308,9 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    border-radius: 15px;
 }
 
 .carousel-images {
@@ -313,10 +321,12 @@ header {
 
 .carousel-images img {
     max-width: 100%;
+    padding-top: 15px;
     transition: transform 0.5s ease-in-out;
+    border-radius: 25px;
 }
 
-button {
+.next, .prev {
     background-color: #006494;
     border: none;
     font-size: 24px;
@@ -325,10 +335,7 @@ button {
     color: #0a1f44;
     display: inline-block;
     height: 100%;
-}
-
-button :hover {
-    background-color: #1B98E0;
+    margin: 10px;
 }
 
 .carousel-buttons {
@@ -340,13 +347,12 @@ button :hover {
 .description {
     padding: 45px;
     font-size: 15px;  
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 80%;
-    
+    width: 100%;
 }
 
 /* Seção - Services*/
 .container-services {
+    text-align: center;
     align-items: center;
     gap: 40px;
     margin-top: 6%;
@@ -363,8 +369,7 @@ button :hover {
 .cards-services {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-top: 3%;
+    justify-content: center;
     font-size: 18px;
     margin-left: 10%;
 }
@@ -401,31 +406,30 @@ button :hover {
 /* Seção - Contact */
 .container-contact {
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     text-align: center;
     width: 100%;
-    gap: 120px;
 }
 
 .contact-image img {
     width: 400px;
     margin-bottom: 10px;
+    border-radius: 25px;
 }
 
 .content-contact {
     text-align: center;
     width: 100%;
-    margin-left: 10%;
 }
 
 .contact-form {
-    margin-top: 15%;
     display: flex;
     flex-direction: column;
     width: 450px;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     margin-left: 30%;
+    border-radius: 25px;
 }
 
 .contact-form input, .contact-form textarea {
@@ -449,85 +453,4 @@ button :hover {
 
 .contact-form button:hover {
     background-color: #00507A;
-}
-
-/* Responsividade */
-
-/* Para telas menores que 768px */
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; 
-        right: 5%;
-        background: #13293D;
-        width: 90%;
-        padding: 20px 0;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .nav a {
-        margin: 15px 0;
-        font-size: 18px;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .nav.active {
-        display: flex;
-    }
-
-    .home {
-        flex-direction: column; /* Muda a direção para coluna */
-        text-align: center; /* Centraliza o texto */
-        height: auto; /* Permite que a altura se ajuste ao conteúdo */
-    }
-
-    #picture {
-        width: 80%; /* Ajusta a largura da imagem */
-        height: auto; /* Mantém a proporção da imagem */
-        margin-top: 20px; /* Adiciona margem superior */
-    }
-
-    .content-home {
-        text-align: center; 
-        margin: 0; 
-    }
-
-    .home h1 {
-        font-size: 40px; 
-    }
-
-    .home h3 {
-        font-size: 30px; 
-    }
-
-    .home p {
-        font-size: 18px; 
-        margin: 0 5%; 
-    }
-
-    .icons-home a {
-        font-size: 28px; 
-    }
-
-    #cv {
-        font-size: 20px; 
-        padding: 10px 30px; 
-    }
-}
-
-/* Para telas maiores que 768px */
-@media (min-width: 769px) {
-    .nav {
-        display: flex; 
-    }
-
-    .mobile-menu {
-        display: none; 
-    }
 }
