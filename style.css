@@ -6,13 +6,13 @@
 }
 
 body {
-    line-height: 1.4;
+    line-height: 1.6;
     background-color: #E8F1F2;
 }
 
 p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 2rem;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #13293D;
-    padding: 20px 5%;
+    padding: 1rem 5%;
     width: 100%;
     z-index: 1000;
 }
@@ -29,6 +29,7 @@ header {
 .title a {
     color: #E8F1F2;
     text-decoration: none;
+    font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .nav {
@@ -41,9 +42,9 @@ header {
     text-align: center;
     align-items: center;
     color: #E8F1F2;
-    padding: 10px 0;
-    margin-left: 35px;
-    font-size: 20px;
+    padding: 0.5rem 0;
+    margin-left: 2vw;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 700;
 }
 
@@ -53,7 +54,7 @@ header {
 
 .mobile-menu {
     display: none;
-    font-size: 30px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: #E8F1F2;
     cursor: pointer;
 }
@@ -61,10 +62,8 @@ header {
 /* Seções */
 .home, .about, .portfolio, .services, .contact{
     display: flex;
-    height: 100vh;
-    padding: 0 8%;
+    padding: 2% 8%;
     background: linear-gradient(to left, #13293D 65%, #E8F1F2 35%);
-    width: 100%;
 }
 
 /* Seção - Home */ 
@@ -81,17 +80,19 @@ header {
 }
 
 .home h1 {
-    font-size: 55px;
+    margin-top: 4rem;
+    font-size: clamp(1rem, 4vw, 3rem);
 }
 
 .home h3 {
-    font-size: 40px;
+    margin-left: 15%;
+    font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .home p {
-    margin-top: 10px;
-    margin-left: 20%;
-    font-size: 25px;
+    margin-top: 1rem;
+    margin-left: 10%;
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
 }
 
 .home h1, .home p {
@@ -99,31 +100,30 @@ header {
 }
 
 .icons-home {
-    margin: 20px 0 40px;
+    margin: 1rem 0 2rem;
 }
 
 .icons-home a {
+    font-size: clamp(1rem, 3vw, 2rem);
+    border: 0.2rem solid #E8F1F2;
     text-decoration: none;
     color: #006494;
-    font-size: 34px;
     display: inline-flex;
     align-items: center;
-    margin-left: 10px;
-    border: 3px solid #E8F1F2;
-    padding: 10px;
+    padding: 0.8rem;
     border-radius: 50%;
 }
 
-.icons-home a:hover {
+.icons-home a:hover{
     color: #E8F1F2;
     background: #1B98E0;
 }
 
 #cv {
     text-decoration: none;
-    font-size: 25px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: #E8F1F2;
-    padding: 15px 50px;
+    padding: 1rem 3rem;
     background-color: #006494;
     border-radius: 45px;
     font-weight: 600;
@@ -135,13 +135,16 @@ header {
 }
 
 #picture {
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-left: 5%;
     background-color: #13293D;
-    height: 600px;
-    width: 600px;
+    height: 50vw;
+    width: 50vw;
+    max-height: 500px;
+    max-width: 500px;
     border-radius: 50%;
-    border: 25px solid #E8F1F2;
-    outline: 25px solid #13293D;
+    border: 1.5vw solid #E8F1F2;
+    outline: 1.5vw solid #13293D;
 }
 
 /* Seção - Esquerda */
@@ -151,25 +154,26 @@ header {
     align-items: center;
     text-align: left;
     justify-content: center;
-    max-width: 320px;
+    max-width: 30%;
 }
 
 .content-left h1 {
     color: #13293D;
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    margin-bottom: 1rem;
 }
 
-.content-left p{
+.content-left p {
     color: #13293D;
-    font-size: 22px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 500;
 }
 
 /* Seções */
-.container-about, .container-portfolio, .container-services, .container-contact {
+.container-about, .container-portfolio, .container-contact {
     display: flex;
     color: #E8F1F2;
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 /* Seções - About */
@@ -180,7 +184,7 @@ header {
 }
 
 .content-about {
-    gap: 50px;
+    margin-top: 5%;  
     display: flex;
     align-items: center;
 }
@@ -188,33 +192,34 @@ header {
 .programming-skills {
     display: flex;
     flex-direction: column;
+    max-width: 250px;
+    margin: 1rem;
 }
 
 .other-skills {
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 .programming-skills, .other-skills {
-    margin-top: 90px;
     color: #E8F1F2;
-    font-size: 18px;
-    text-align: center;
-    justify-content: center;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     border-radius: 10px;
-    width: 350px; 
-    height: 600px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
+    width: 140%; 
+    height: 20%;
+    padding: 2%;
 }
 
 .programming-skills h2, .other-skills h2 {
-    font-size: 40px;
-    margin-bottom: 14px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
 }
 
 .skill p, .skill-box p {
-    font-size: 17px;
-    margin: 7px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.skill, .skill-box {
+   margin: 0.2rem;
 }
 
 .skill a {
@@ -230,46 +235,17 @@ header {
 
 .icon-skill {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
+    padding: 0.5rem;
 }
 
 .icon-skill i {
-    font-size: 35px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: #1B98E0;
 }
 
-.progress-bar {
-    background-color: #E8F1F2;
-    border-radius: 10px;
-    height: 20px;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.progress {
-    height: 100%;
-    background-color: #1B98E0;
-    border-radius: 5px;
-    position: relative;
-}
-
-.progress-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #006494;
-    font-weight: bold;
-    z-index: 1;
-}
-
-.skill-box h3 {
-    margin-bottom: 5px;
-    font-size: 1.2em;
+.skill-box h3, .skill h3 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 @keyframes blink-animation {
@@ -288,40 +264,47 @@ header {
     align-items: center;
 }
 
+.content-portfolio {
+    text-align: center;
+    width: 100%;
+    margin-left: 10%;
+}
+
 #github {
     text-decoration: none;
-    font-size: 20px;
+    font-size: clamp(0.5rem, 2.5vw, 1.2rem);
     color: #E8F1F2;
-    padding: 10px 30px;
+    padding: 1rem 2rem;
     background-color: #006494;
     border-radius: 45px;
     font-weight: 600;
     box-shadow: 0 0 10px;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .carousel {
     flex: 1;
-    margin-left: 15%;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
+    padding-top: 2%;
     border-radius: 15px;
 }
 
 .carousel-images {
     display: flex;
     overflow: hidden;
-    width: 80%;
+    width: 100%;
 }
 
 .carousel-images img {
     max-width: 100%;
-    padding-top: 15px;
+    min-height: 300px;
+    padding-top: 1rem;
     transition: transform 0.5s ease-in-out;
     border-radius: 25px;
 }
@@ -329,13 +312,13 @@ header {
 .next, .prev {
     background-color: #006494;
     border: none;
-    font-size: 24px;
-    padding: 10px;
+    font-size: clamp(0.5rem, 2vw, 2rem);
+    padding: 1rem;
     cursor: pointer;
     color: #0a1f44;
     display: inline-block;
     height: 100%;
-    margin: 10px;
+    margin: 1rem;
 }
 
 .carousel-buttons {
@@ -345,62 +328,9 @@ header {
 }
 
 .description {
-    padding: 45px;
-    font-size: 15px;  
+    padding: 2rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     width: 100%;
-}
-
-/* Seção - Services*/
-.container-services {
-    text-align: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 6%;
-}
-
-.container-services .content-left {
-    padding-top: 0px;
-}
-
-.container-services .content-left, .container-contact .content-left {
-    width: 650px;
-}
-
-.cards-services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 18px;
-    margin-left: 10%;
-}
-
-.cards-services h3 {
-    color: #1B98E0;
-}
-
-.service-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    margin: 10px;
-    border-radius: 10px;
-    width: 220px;
-    height: 270px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-}
-
-.service-card h3, .icon i {
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.icon i {
-    width: 100%;
-    font-size: 20px;
-    padding-top: 20px;
 }
 
 /* Seção - Contact */
@@ -408,46 +338,46 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    width: 100%;
 }
 
 .contact-image img {
-    width: 400px;
-    margin-bottom: 10px;
+    width: 40vw;
+    max-width: 450px;
+    margin-bottom: 1rem;
     border-radius: 25px;
 }
 
 .content-contact {
     text-align: center;
-    width: 100%;
+    margin-left: 10vw;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: 90%;
+    max-width: 500px;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin-left: 30%;
+    padding: 1rem;
     border-radius: 25px;
 }
 
 .contact-form input, .contact-form textarea {
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 5px;
     background-color: #E8F1F2;
-    font-size: 1rem;
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
 }
 
 .contact-form button {
-    padding: 10px;
+    padding: 0.5rem;
     background-color: #006494;
     color: #E8F1F2;
     border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     cursor: pointer;
 }
 
