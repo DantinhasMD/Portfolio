@@ -21,5 +21,5 @@ O site foi projetado para ser totalmente responsivo, adaptando-se a diferentes t
 - Busco uma carreira voltada para Dados, logo desejo adicionar mais projetos voltados para análise de dados e automação.
 - Gostaria de exibir meus conhecimentos em formato de vídeo, junto aos meu projetos práticos.
 
-🔗 Acesse o Portfólio
+🔗 Acesse o Portfólio:
 [Meu Portfólio](https://dantinhasmd.github.io/Portfolio/)
