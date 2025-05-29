@@ -1,13 +1,12 @@
-/* Header */
 header {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   right: 0;
   z-index: 50;
-  transition: all var(--transition-normal);
-  padding: 1.25rem 0;
-  background-color: transparent;
+  padding: 1.25rem ;
+  background-color: var(--primary-bg);
+  color: var(--secondary-bg);
 }
 
 header.scrolled {
@@ -25,15 +24,14 @@ header.scrolled {
 }
 
 .logo-icon {
-  color: var(--primary-400);
+  color: var(--accent-color);
 }
-
 
 .logo-text {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--secondary-bg);
 }
 
 .nav-desktop {
@@ -51,13 +49,12 @@ header.scrolled {
 .nav-link {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-secondary-dark);
+  color: var(--secondary-bg);
   text-decoration: none;
-  transition: color var(--transition-normal);
 }
 
 .nav-link:hover {
-  color: var(--primary-400);
+  color: var(--accent-color);
 }
 
 .nav-link.active {

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduarda Dantas</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
+
+    <link rel="stylesheet" href="css/mainF.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -32,6 +33,13 @@
         <span class="logo-text">Eduarda Dantas</span>
       </a>
 
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+      <!-- Ícone hamburguer -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
       <nav class="nav-desktop">
         <a href="index.html" class="nav-link">Início</a>
         <a href="pages/about.html" class="nav-link">Sobre</a>
@@ -40,20 +48,6 @@
         <a href="pages/services.html" class="nav-link">Serviços</a>
         <a href="pages/contact.html" class="nav-link">Contato</a>
       </nav>
-
-      <div class="flex items-center gap-4">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-          <!-- Icon will be inserted by JavaScript -->
-        </button>
-
-        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
     </div>
 
     <!-- Mobile Menu -->
@@ -175,65 +169,545 @@
                 </div>
             </div>
         </section>
-
-        <section id="portfolio" class="projects">
-            <div class="projects-container">
-                <h2>Meus Projetos!</h2>
-                <p>Apesar de possuir vários projetos para o desenvolvimento Web, atualmente estou me dedicando a projetos que envolvem Análise, Dados e python. Além disso, trabalho continuamente para expandir minhas habilidades, estudando áreas que acredito serem fundamentais, como Nuvem, Suporte e DevOps.</p>
-                
-                <h3>Exemplos de Projetos</h3>
-                <p>Aqui temos alguns projetos desenvolvidos por mim. Temos algumas imagens de trabalhos focados em Front-end e outros focados em Python e Dados. Sugiro que dê uma olhada diretamente no GitHub!</p>
-                
-                <div class="project-showcase">
-                    <div class="project-slider">
-                        <button class="slider-btn prev-btn">❮</button>
-                        <div class="slider-container">
-                            <div class="slider-item active">
-                                <img src="https://dantinhasmd.github.io/Portfolio/assets/img/project1.jpg" alt="Projeto 1">
-                            </div>
-                            <div class="slider-item">
-                                <img src="https://dantinhasmd.github.io/Portfolio/assets/img/project2.jpg" alt="Projeto 2">
-                            </div>
-                            <div class="slider-item">
-                                <img src="https://dantinhasmd.github.io/Portfolio/assets/img/project3.jpg" alt="Projeto 3">
-                            </div>
-                        </div>
-                        <button class="slider-btn next-btn">❯</button>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/dantinhasmd" class="github-link">Github Repositórios</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="contact-container">
-                <h2>Entre em Contato</h2>
-                <p>Tem interesse em trabalhar comigo ou quer saber mais sobre meus projetos? Entre em contato!</p>
-                
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
-                </form>
-            </div>
-        </section>
     </main>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center relative overflow-hidden">
+      <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="transition-all duration-700 transform opacity-0 translate-y-10" id="hero-content">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-serif mb-4 text-gray-900 dark:text-white">
+              <div class="animated-text inline-block" data-text="Transformando Dados em Soluções" data-duration="0.07"></div>
+            </h1>
+            <p class="text-xl text-gray-700 dark:text-gray-300 mb-8">
+              <div class="animated-text" data-text="Consultora em análise de dados, visualização e automação de processos." data-delay="1.5" data-duration="0.05"></div>
+            </p>
+            
+            <div class="flex flex-wrap gap-4 justify-center mt-8 mb-12">
+              <a href="pages/projects.html" class="px-6 py-3 rounded-md bg-primary-500 hover:bg-primary-600 text-white transition-colors flex items-center gap-2">
+                Ver Projetos 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="pages/contact.html" class="px-6 py-3 rounded-md border border-primary-500 text-primary-500 hover:bg-primary-50 dark:hover:bg-gray-800 transition-colors">
+                Entre em Contato
+              </a>
+            </div>
+          </div>
+          
+          <!-- Animated icons -->
+          <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="transition-all duration-700 delay-300 transform opacity-0 translate-y-10 animated-icon">
+              <div class="flex flex-col items-center p-4">
+                <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-4 text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium">Análise de Dados</h3>
+              </div>
+            </div>
+            
+            <div class="transition-all duration-700 delay-500 transform opacity-0 translate-y-10 animated-icon">
+              <div class="flex flex-col items-center p-4">
+                <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-4 text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v18h18"></path>
+                    <path d="m19 9-5 5-4-4-3 3"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium">Visualização</h3>
+              </div>
+            </div>
+            
+            <div class="transition-all duration-700 delay-700 transform opacity-0 translate-y-10 animated-icon">
+              <div class="flex flex-col items-center p-4">
+                <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-4 text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="font-medium">Desenvolvimento</h3>
+              </div>
+            </div>
+            
+            <div class="transition-all duration-700 delay-900 transform opacity-0 translate-y-10 animated-icon">
+              <div class="flex flex-col items-center p-4">
+                <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-4 text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                    <line x1="20" y1="14" x2="23" y2="14"></line>
+                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                    <line x1="1" y1="14" x2="4" y2="14"></line>
+                  </svg>
+                </div>
+                <h3 class="font-medium">Automação</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Easter egg -->
+          <div class="mt-16">
+            <div class="code-easter-egg mx-auto" data-trigger-text="// descubra o segredo" data-easter-egg-text="function revelarTalento() { return 'Transformando dados em magia desde 2021'; }"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <main>
+    <div class="py-16 md:py-24">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold font-serif mb-4 text-gray-900 dark:text-white">
+              <div class="animated-text inline-block" data-text="Sobre Mim" data-duration="0.08"></div>
+            </h1>
+            <p class="text-lg text-gray-700 dark:text-gray-300">
+              <div class="animated-text" data-text="Conheça minha jornada e paixão por dados e automação" data-delay="1" data-duration="0.05"></div>
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div class="order-2 md:order-1">
+              <h2 class="text-2xl font-serif font-semibold mb-4 text-gray-800 dark:text-white">Maria Eduarda Dantas</h2>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Minha paixão está em encontrar padrões escondidos nos dados e automatizar processos para aumentar a eficiência. Atuo principalmente ajudando microempreendedores a estruturarem seus processos de vendas.
+              </p>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Gosto de unir análise, planejamento e criatividade para tornar o digital um aliado de quem está começando. Acredito que simplicidade, clareza e funcionalidade são as chaves de qualquer solução.
+              </p>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Meu trabalho é guiado pela crença de que os dados têm o poder de transformar organizações quando interpretados corretamente. Estou constantemente aprendendo novas tecnologias e metodologias para aprimorar minhas habilidades. 
+              </p>
+              
+              <div class="mt-8 grid grid-cols-2 gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-medium text-gray-900 dark:text-white">Formação</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Análise e Desenvolvimento de Sistemas</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="8" r="7"></circle>
+                      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-medium text-gray-900 dark:text-white">Experiência</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">+7 meses na área</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-medium text-gray-900 dark:text-white">Localização</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Brasil - SP</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-medium text-gray-900 dark:text-white">Paixão</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">IA, Dados & Automação</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="order-1 md:order-2">
+              <div class="relative">
+                <div class="w-full h-96 bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                    alt="Maria Eduarda Dantas" 
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-primary-500 rounded-lg z-10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                    <path d="M12 3a1 1 0 0 0-1 1v.172a3 3 0 0 0-.876.5l-.148-.148a1 1 0 0 0-1.415 0l-.707.707a1 1 0 0 0 0 1.414l.148.149a3 3 0 0 0-.5.876H7.5a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h.172a3 3 0 0 0 .5.876l-.148.148a1 1 0 0 0 0 1.415l.707.707a1 1 0 0 0 1.414 0l.149-.148a3 3 0 0 0 .876.5V16a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-.172a3 3 0 0 0 .876-.5l.148.148a1 1 0 0 0 1.415 0l.707-.707a1 1 0 0 0 0-1.414l-.148-.149a3 3 0 0 0 .5-.876H18.5a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-.172a3 3 0 0 0-.5-.876l.148-.148a1 1 0 0 0 0-1.415l-.707-.707a1 1 0 0 0-1.414 0l-.149.148a3 3 0 0 0-.876-.5V4a1 1 0 0 0-1-1h-1Z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M3 14c.9.9 2.5 1.5 4.5 1.5"></path>
+                    <path d="M16.5 15.5c2 0 3.6-.6 4.5-1.5"></path>
+                    <path d="M3 10c.9-.9 2.5-1.5 4.5-1.5"></path>
+                    <path d="M16.5 8.5c2 0 3.6.6 4.5 1.5"></path>
+                  </svg>
+                </div>
+                <div class="absolute -bottom-3 -right-3 w-24 h-24 bg-primary-300 dark:bg-primary-700 rounded-lg"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="py-12 border-t border-b border-gray-200 dark:border-gray-800">
+            <h2 class="text-2xl font-serif font-semibold mb-6 text-center text-gray-800 dark:text-white">Minha Filosofia</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h3 class="text-xl font-medium mb-2 text-gray-800 dark:text-white">Dados com Propósito</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Acredito que cada conjunto de dados conta uma história. Meu trabalho é revelar essas histórias de forma que gerem impacto real nos negócios.
+                </p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h3 class="text-xl font-medium mb-2 text-gray-800 dark:text-white">Aprendizado Contínuo</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  O campo de dados está sempre evoluindo. Mantenho-me atualizada com as mais recentes tendências e tecnologias para oferecer as melhores soluções.
+                </p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h3 class="text-xl font-medium mb-2 text-gray-800 dark:text-white">Soluções Personalizadas</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Cada desafio é único. Desenvolvo soluções sob medida que se alinham perfeitamente às necessidades específicas de cada cliente.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="py-12">
+            <h2 class="text-2xl font-serif font-semibold mb-6 text-center text-gray-800 dark:text-white">Trajetória Profissional</h2>
+            <div class="relative border-l-2 border-primary-300 dark:border-primary-700 pl-6 pb-6 ml-4">
+              <div class="mb-10 relative">
+                <div class="absolute -left-10 top-0 w-6 h-6 bg-primary-500 rounded-full"></div>
+                <div class="absolute -left-8 top-2 w-2 h-2 bg-white dark:bg-gray-900 rounded-full"></div>
+                <h3 class="text-xl font-medium mb-1 text-gray-800 dark:text-white">Analista de Dados Sênior</h3>
+                <p class="text-primary-600 dark:text-primary-400 text-sm mb-2">2022 - Presente | TechCorp</p>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Lidero projetos de análise de dados e automação, desenvolvendo modelos preditivos e dashboards para tomada de decisão em tempo real.
+                </p>
+              </div>
+              
+              <div class="mb-10 relative">
+                <div class="absolute -left-10 top-0 w-6 h-6 bg-primary-500 rounded-full"></div>
+                <div class="absolute -left-8 top-2 w-2 h-2 bg-white dark:bg-gray-900 rounded-full"></div>
+                <h3 class="text-xl font-medium mb-1 text-gray-800 dark:text-white">Auxiliar de TI - Aprendiz</h3>
+                <p class="text-primary-600 dark:text-primary-400 text-sm mb-2">2024 - 2025 | Suporte e DevOps</p>
+                <p class="text-gray-700 dark:text-gray-300">
+                  No suporte, aprendi a importância da agilidade, paciência e comunicação clara para resolver problemas. Já no DevOps, mergulhei no mundo da automação, infraestrutura e integração contínua, descobrindo o poder de unir desenvolvimento e operação para a eficiência dos processos.
+                </p>
+              </div>
+              
+              <div class="relative">
+                <div class="absolute -left-10 top-0 w-6 h-6 bg-primary-500 rounded-full"></div>
+                <div class="absolute -left-8 top-2 w-2 h-2 bg-white dark:bg-gray-900 rounded-full"></div>
+                <h3 class="text-xl font-medium mb-1 text-gray-800 dark:text-white">Análise e Desenvolvimento de Sistemas</h3>
+                <p class="text-primary-600 dark:text-primary-400 text-sm mb-2">2024 - 2026 | Bacharel - Tecnólogo</p>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Ao longo do curso, desenvolvi habilidades técnicas, aprendi a estruturar projetos e fortalecer minha criatividade aplicada ao digital. Cada projeto me aproximou mais dos meus sonhos, mostrando que, com dedicação e paciência, sou capaz de construir meu próprio caminho no mundo da tecnologia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <main>
+    <div class="py-16 md:py-24">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold font-serif mb-4 text-gray-900 dark:text-white">
+              <div class="animated-text inline-block" data-text="Minhas Habilidades" data-duration="0.08"></div>
+            </h1>
+            <p class="text-lg text-gray-700 dark:text-gray-300">
+              <div class="animated-text" data-text="Competências técnicas e conhecimentos especializados" data-delay="1" data-duration="0.05"></div>
+            </p>
+          </div>
+          
+          <!-- Technical Skills -->
+          <div class="mb-20">
+            <h2 class="text-2xl font-serif font-semibold mb-6 text-gray-800 dark:text-white">Habilidades Técnicas</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+              <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-gray-800 dark:text-white">Python</h3>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-gray-800 dark:text-white">Data Analysis</h3>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"></path>
+                    <path d="M12 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
+                    <path d="M12 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
+                    <path d="M12 6V4"></path>
+                    <path d="M16 7l1.5-1.5"></path>
+                    <path d="M18 11h2"></path>
+                    <path d="M16 16l1.5 1.5"></path>
+                    <path d="M12 18v2"></path>
+                    <path d="M7 16l-1.5 1.5"></path>
+                    <path d="M4 11H2"></path>
+                    <path d="M7 7L5.5 5.5"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-gray-800 dark:text-white">Machine Learning</h3>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-gray-800 dark:text-white">SQL</h3>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                    <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-gray-800 dark:text-white">Tableau</h3>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v18h18"></path>
+                    <path d="m19 9-5 5-4-4-3 3"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-gray-800 dark:text-white">PowerBI</h3>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-gray-800 dark:text-white">Excel</h3>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-gray-800 dark:text-white">Automation</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Soft Skills -->
+          <div class="mb-20">
+            <h2 class="text-2xl font-serif font-semibold mb-6 text-gray-800 dark:text-white">Habilidades Interpessoais</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+                <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400 mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                    <path d="m9 14 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-medium mb-2 text-gray-800 dark:text-white">Organização</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Capacidade de estruturar e gerenciar projetos e dados de forma eficiente.
+                </p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+                <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400 mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-medium mb-2 text-gray-800 dark:text-white">Planejamento</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Habilidade em definir estratégias e cronogramas efetivos.
+                </p>
+              </div>
+              
+              <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+                <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-500 dark:text-primary-400 mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-medium mb-2 text-gray-800 dark:text-white">Aprendizado Contínuo</h3>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Busca constante por novos conhecimentos e tecnologias.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certificates -->
+          <div>
+            <h2 class="text-2xl font-serif font-semibold mb-6 text-gray-800 dark:text-white">Certificações</h2>
+            <div class="relative" id="certificates-carousel">
+              <button
+                id="prev-cert"
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-gray-800 dark:text-gray-200"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m15 18-6-6 6-6"></path>
+                </svg>
+              </button>
+              
+              <button
+                id="next-cert"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-gray-800 dark:text-gray-200"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg>
+              </button>
+              
+              <div class="overflow-hidden px-12">
+                <div id="certificates-slider" class="flex transition-transform duration-500">
+                  <!-- Certificate 1 -->
+                  <div class="w-full flex-shrink-0 px-4">
+                    <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-sm">
+                      <div class="h-48 relative">
+                        <div class="absolute inset-0 bg-primary-500/20"></div>
+                        <img 
+                          src="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                          alt="Data Science Professional Certificate" 
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-medium mb-1 text-gray-800 dark:text-white">Data Science Professional Certificate</h3>
+                        <p class="text-primary-600 dark:text-primary-400 mb-2">Data Science</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">IBM</p>
+                        <p class="text-gray-500 dark:text-gray-500 text-sm">Janeiro 2023</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Certificate 2 -->
+                  <div class="w-full flex-shrink-0 px-4">
+                    <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-sm">
+                      <div class="h-48 relative">
+                        <div class="absolute inset-0 bg-primary-500/20"></div>
+                        <img 
+                          src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                          alt="Machine Learning Specialization" 
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-medium mb-1 text-gray-800 dark:text-white">Machine Learning Specialization</h3>
+                        <p class="text-primary-600 dark:text-primary-400 mb-2">Machine Learning</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Stanford University / Coursera</p>
+                        <p class="text-gray-500 dark:text-gray-500 text-sm">Junho 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Certificate 3 -->
+                  <div class="w-full flex-shrink-0 px-4">
+                    <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-sm">
+                      <div class="h-48 relative">
+                        <div class="absolute inset-0 bg-primary-500/20"></div>
+                        <img 
+                          src="https://images.pexels.com/photos/7654096/pexels-photo-7654096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                          alt="SQL for Data Analysis" 
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-medium mb-1 text-gray-800 dark:text-white">SQL for Data Analysis</h3>
+                        <p class="text-primary-600 dark:text-primary-400 mb-2">Database</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Udacity</p>
+                        <p class="text-gray-500 dark:text-gray-500 text-sm">Março 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Certificate 4 -->
+                  <div class="w-full flex-shrink-0 px-4">
+                    <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-sm">
+                      <div class="h-48 relative">
+                        <div class="absolute inset-0 bg-primary-500/20"></div>
+                        <img 
+                          src="https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                          alt="Advanced Data Automation with Python" 
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-medium mb-1 text-gray-800 dark:text-white">Advanced Data Automation with Python</h3>
+                        <p class="text-primary-600 dark:text-primary-400 mb-2">Automation</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">DataCamp</p>
+                        <p class="text-gray-500 dark:text-gray-500 text-sm">Setembro 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+    
 
   <!-- Footer -->
   <footer>
@@ -318,6 +792,7 @@
   </footer>
   <!---->
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="scriptf.js"></script>
 </body>
 </html>

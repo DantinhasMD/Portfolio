@@ -4,7 +4,7 @@
     --secondary-bg: #f0f4f5;
     --accent-color: #0096c7;
     --text-light: #ffffff;
-    --text-dark: #0e2a3b;
+    --text-dark: #000;
     --border-color: #2a4b5c;
     --instagram-color: #e1306c;
     --tiktok-color: #ff0050;
@@ -13,46 +13,80 @@
 }
 
 /* Reset e estilos gerais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
-}
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+} 
 
 body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--secondary-bg);
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 code {
   font-family: 'JetBrains Mono', monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
-    line-height: 1.2;
+ul {
+    list-style: none;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon.instagram {
+    background-color: var(--instagram-color);
+}
+
+.social-icon.tiktok {
+    background-color: var(--tiktok-color);
+}
+
+.social-icon.github {
+    background-color: var(--github-color);
+}
+
+.social-icon.linkedin {
+    background-color: var(--linkedin-color);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+/*
 a {
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
 }
 
-ul {
-    list-style: none;
-}
+
 
 img {
     max-width: 100%;
@@ -73,7 +107,7 @@ section {
 
 
 
-/* Seção Hero */
+/* Seção Hero 
 .hero {
     background-color: var(--primary-bg);
     color: var(--text-light);
@@ -138,47 +172,10 @@ section {
     font-size: 1.1rem;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
 
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
+*/
 
-.social-icon.instagram {
-    background-color: var(--instagram-color);
-}
-
-.social-icon.tiktok {
-    background-color: var(--tiktok-color);
-}
-
-.social-icon.github {
-    background-color: var(--github-color);
-}
-
-.social-icon.linkedin {
-    background-color: var(--linkedin-color);
-}
-
-.social-icon:hover {
-    transform: translateY(-5px);
-}
-
-
-
-/* Seção de Habilidades */
+/* Seção de Habilidades 
 .skills {
     background-color: var(--secondary-bg);
     padding: 5rem 1rem;
@@ -239,7 +236,7 @@ section {
     font-size: 1.5rem;
 }
 
-/* Seção de Projetos */
+/* Seção de Projetos 
 .projects {
     background-color: var(--secondary-bg);
     padding: 5rem 1rem;
@@ -339,7 +336,7 @@ section {
     transform: translateY(-3px);
 }
 
-/* Seção de Contato */
+/* Seção de Contato 
 .contact {
     background-color: var(--primary-bg);
     color: var(--text-light);
@@ -405,4 +402,4 @@ section {
 
 .submit-btn:hover {
     background-color: #007ba7;
-}
+} */
