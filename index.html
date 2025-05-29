@@ -3,155 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Eduarda Dantas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
 </head>
 <body>
-    <header>
-        <div class="title">
-            <h1><a href="#home">Eduarda Dantas</a></h1>
-        </div>
+  <!-- Header -->
+  <header>
+    <div class="container flex justify-between items-center">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon h-7 w-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+          <path d="M3 5V19C3 20.7 7 22 12 22"></path>
+          <path d="M3 12C3 13.7 7 15 12 15"></path>
+          <path d="M21 5V9"></path>
+          <path d="M21 9C18 9 15 11 15 14V19"></path>
+          <path d="M21 9C21 12 21 14 21 16C21 19 15 19 15 19"></path>
+        </svg>
+        <span class="logo-text">Eduarda Dantas</span>
+      </a>
 
-        <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="pages/about.html" class="nav-link">Sobre</a>
+        <a href="pages/skills.html" class="nav-link">Habilidades</a>
+        <a href="pages/projects.html" class="nav-link">Projetos</a>
+        <a href="pages/services.html" class="nav-link">Serviços</a>
+        <a href="pages/contact.html" class="nav-link">Contato</a>
+      </nav>
 
-        <div class="mobile-menu" onclick="toggleMenu()"> ☰ </div>
-    </header>
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+          <!-- Icon will be inserted by JavaScript -->
+        </button>
 
-    <section class="home" id="home" alt="Eduarda Dantas">
-        <img src="imagens/fotoPerfil.png" id="picture">
-        <div class="content-home">
-            <h1>Eduarda Dantas</h1>
-            <h3 class=' blink'></i>Data and Automation</h3>
-            <p>Apaixonada por criar soluções digitais criativas e funcionais. Juntos, transformamos ideias em Realidade! Explore meus projetos e conheça um pouco mais de mim.</p>
-        
-            <div class="icons-home">
-                <a href="https://www.instagram.com/mariadantas.__/?utm_source=ig_web_button_share_sheet"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.tiktok.com/@mariacoding?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
-                <a href="https://github.com/DantinhasMD"><i class='bx bxl-github'></i></a>
-                <a href="www.linkedin.com/in/eduarda-dantas-6834012a9"><i class='bx bxl-linkedin'></i></a>
-            </div>
-            <a href="" id="cv">Download CV</a>
-        </div>
-    </section>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-    <section class="about" id="about">
-        <div class="container-about">
-            <div class="content-left">
-                <h1>Minhas Habilidades</h1>
-                <p>Estou cursando Análise e Desenvolvimento de Sistemas, buscando aprofundar meus conhecimentos na área de Dados. Além disso, faço outros cursos voltados para Análise, Dados, Automação e Inteligência Artificial, uma vez que viso uma carreira em Engenharia de Dados, especializada em Automações de Processos Digitais.</p>
-            </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="flex flex-col items-center justify-center h-full gap-8">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="pages/about.html" class="nav-link">Sobre</a>
+        <a href="pages/skills.html" class="nav-link">Habilidades</a>
+        <a href="pages/projects.html" class="nav-link">Projetos</a>
+        <a href="pages/services.html" class="nav-link">Serviços</a>
+        <a href="pages/contact.html" class="nav-link">Contato</a>
+      </div>
+    </div>
+  </header>
+  <!---->
 
-            <div class="content-about">        
-                <div class="other-skills">
-                    <h2>Habilidades</h2>
-                    <div class="skill-box">
-                        <h3>Programação Web</h3>
-                        <div class="icon-skill">
-                            <i class='bx bxl-html5 blink'></i> 
-                           <i class='bx bxl-css3 blink'></i>
-                            <i class='bx bxl-javascript blink'></i>
-                           <i class='bx bxl-react blink'></i> 
-                        </div>
-                        <p>Conhecimento Intermediário em HTML, CSS, JavaScript e ReactJS.</p>
+    <main>
+        <section id="home" class="hero min-h-screen flex items-center relative overflow-hidden">
+            <div class="hero-content container mx-auto px-4 py-16 md:py-24 relative z-10">
+                <div class="profile-image">
+                    <div class="profile-container">
+                        <img src="https://dantinhasmd.github.io/Portfolio/assets/img/profile.jpg" alt="Eduarda Dantas">
+                    </div>
+                </div>
+                <div class="hero-text max-w-3xl mx-auto text-center">
+                    <h1>Eduarda Dantas</h1>
+                    <h2>Data and Automation</h2>
+                    <p>Apaixonada por criar soluções digitais criativas e funcionais. Juntos, transformamos ideias em Realidade! Explore meus projetos e conheça um pouco mais de mim.</p>
+                    
+                    <div class="social-icons">
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
                     </div>
                     
-                    <div class="skill-box">
-                        <h3>Python e Dados</h3>
-                        <div class="icon-skill">
-                            <i class='bx bxl-python blink'></i> 
-                            <i class='bx bx-data blink'></i> 
-                            <i class='bx bx-spreadsheet blink'></i> 
-                        </div>
-                        <p>Foco em Python, SQL, Banco de Dados e Automação de Processos.</p>
-                    </div>
-
-                    <div class="skill-box">
-                        <h3>Complementares</h3>
-                        <div class="icon-skill">
-                            <i class='bx bx-support blink'></i> 
-                            <i class='bx bx-cloud blink'></i> 
-                        </div>
-                        <p>Estudando Nuvem, DevOps, Linux e  Suporte Técnico.</p>
+                    <!-- Botões -->
+                    <div class="flex flex-wrap gap-4 justify-center mt-8 mb-12">
+                        <a href="pages/projects.html" class="px-6 py-3 rounded-md bg-primary-500 hover:bg-primary-600 text-white transition-colors flex items-center gap-2">
+                            Ver Projetos
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                        <a href="pages/contact.html" class="px-6 py-3 rounded-md border border-primary-500 text-primary-500 hover:bg-primary-50 dark:hover:bg-gray-800 transition-colors">
+                            Entre em Contato
+                        </a>
                     </div>
                 </div>
-        
-                <div class="programming-skills">
-                    <h2>Cursos</h2>
-                    <div class="skill">
-                        <h3>Programação Web</h3>
-                        <p>Bootcamps Dio: <a href="https://github.com/DantinhasMD/GFT-Start-6---L-gica-de-Programa-o.git"">Lógica(2024)</a>,  <a href="https://github.com/DantinhasMD/Bootcamp-Ri-Happy.git">Front-End(2024)</a></li> e <a href="https://github.com/DantinhasMD/Projetos-em-JavaScript.git">JavaScript(2024)</a></li></p>
-                    </div>    
-                      
-                    <div class="skill">
-                        <h3>Python e Dados</h3>
-                        <p>Coursera/DIO: Análise de Dados (2025); IA com Dados(2025); Udemy: Python(2025)</p>
-                    </div>
+            </div>
+            
+            <!-- Easter egg do segundo HTML -->
+            <div class="mt-16">
+                <div class="code-easter-egg mx-auto" data-trigger-text="// descubra o segredo" data-easter-egg-text="function revelarTalento() { return 'Transformando dados em magia desde 2021'; }"></div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="skills-container">
+                <div class="skills-intro">
+                    <h2>Minhas Habilidades</h2>
+                    <p>Estou cursando Análise e Desenvolvimento de Sistemas, buscando aprofundar meus conhecimentos na área de Dados. Além disso, faço outros cursos voltados para Análise, Dados, Automação e Inteligência Artificial, uma vez que viso uma carreira em Engenharia de Dados, especializada em Automações de Processos Digitais.</p>
+                </div>
                 
-                    <div class="skill">
-                        <h3>Complementares</h3>
-                        <p>Coursera: Suporte (2025); DIO: Linux(2025)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio" id="portfolio">
-        <div class="container-portfolio">
-            <div class="content-left">
-                <h1>Meus Projetos!</h1>
-                <p>Apesar de possuir vários projetos para o desenvolvimento Web, atualmente estou me dedicando a projetos que envolvem Análise, Dados e python. Além disso, trabalho continuamente para expandir minhas habilidades, estudando áreas que acredito serem fundamentais, como Nuvem, Suporte e DevOps.</p>
-            </div>
-
-            <div class="content-portfolio">
-                <div class="carousel">
-                    <div class="carousel-buttons">
-                        <button class="prev">&#10094;</button>
-                        <div class="carousel-images">
-                            <img src="imagens/Front1.png" alt="Project Image 1">
-                            <img src="imagens/back1.png" alt="Project Image 2">
-                            <img src="imagens/Front2.png" alt="Project Image 3">
-                            <img src="imagens/back2.png" alt="Project Image 4">
+                <div class="skills-content">
+                    <div class="skills-column">
+                        <h3>Habilidades</h3>
+                        
+                        <div class="skill-category">
+                            <h4>Programação Web</h4>
+                            <div class="skill-icons">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-css3-alt"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <p>Conhecimento Intermediário em HTML, CSS, JavaScript e ReactJS.</p>
                         </div>
-                        <button class="next">&#10095;</button>
+                        
+                        <div class="skill-category">
+                            <h4>Python e Dados</h4>
+                            <div class="skill-icons">
+                                <i class="fab fa-python"></i>
+                                <i class="fas fa-database"></i>
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <p>Foco em Python, SQL, Banco de Dados e Automação de Processos.</p>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Complementares</h4>
+                            <div class="skill-icons">
+                                <i class="fas fa-headset"></i>
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <p>Estudando Nuvem, DevOps, Linux e Suporte Técnico.</p>
+                        </div>
                     </div>
-                    <div class="description">
-                        <h2>Exemplos de Projetos</h2>
-                        <p>Aqui temos alguns projetos desenvolvidos por mim. Temos algumas imagens de trabalhos focados em Front-end e outros focados em Python e Dados. Sugiro que dê uma olhada diretamente no GitHub!</p>
-                        <a href="https://github.com/DantinhasMD" id="github">Github Repositórios</a>
+                    
+                    <div class="skills-column">
+                        <h3>Cursos</h3>
+                        
+                        <div class="course-category">
+                            <h4>Python e Dados</h4>
+                            <p>Coursera/DIO: Análise de Dados (2025); IA com Dados(2025); Udemy: Python(2025)</p>
+                        </div>
+                        
+                        <div class="course-category">
+                            <h4>Programação Web</h4>
+                            <p>Bootcamps Dio: Lógica(2024), Front-End(2024) e JavaScript(2024)</p>
+                        </div>
+                        
+                        <div class="course-category">
+                            <h4>Complementares</h4>
+                            <p>Coursera: Suporte (2025); DIO: Linux(2025)</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" id="contact">
-        <div class="container-contact">
-            <div class="content-left">
-                <h1>Meu Contato!</h1>
-                <p>Se você tiver alguma dúvida, sugestão ou quiser conversar sobre um projeto, estou à disposição! Entre em contato e vamos conversar sobre como posso contribuir com o que você precisa.</p>
-            </div>
-
-            <div class="content-contact">        
-                <form class="contact-form" id="contact-form">
-                    <div class="contact-image">
-                        <img src="imagens/capaForm.webp" alt="Contact illustration">
+        <section id="portfolio" class="projects">
+            <div class="projects-container">
+                <h2>Meus Projetos!</h2>
+                <p>Apesar de possuir vários projetos para o desenvolvimento Web, atualmente estou me dedicando a projetos que envolvem Análise, Dados e python. Além disso, trabalho continuamente para expandir minhas habilidades, estudando áreas que acredito serem fundamentais, como Nuvem, Suporte e DevOps.</p>
+                
+                <h3>Exemplos de Projetos</h3>
+                <p>Aqui temos alguns projetos desenvolvidos por mim. Temos algumas imagens de trabalhos focados em Front-end e outros focados em Python e Dados. Sugiro que dê uma olhada diretamente no GitHub!</p>
+                
+                <div class="project-showcase">
+                    <div class="project-slider">
+                        <button class="slider-btn prev-btn">❮</button>
+                        <div class="slider-container">
+                            <div class="slider-item active">
+                                <img src="https://dantinhasmd.github.io/Portfolio/assets/img/project1.jpg" alt="Projeto 1">
+                            </div>
+                            <div class="slider-item">
+                                <img src="https://dantinhasmd.github.io/Portfolio/assets/img/project2.jpg" alt="Projeto 2">
+                            </div>
+                            <div class="slider-item">
+                                <img src="https://dantinhasmd.github.io/Portfolio/assets/img/project3.jpg" alt="Projeto 3">
+                            </div>
+                        </div>
+                        <button class="slider-btn next-btn">❯</button>
                     </div>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="tel" name="phone" placeholder="Your Number" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Enviar</button>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/dantinhasmd" class="github-link">Github Repositórios</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <h2>Entre em Contato</h2>
+                <p>Tem interesse em trabalhar comigo ou quer saber mais sobre meus projetos? Entre em contato!</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
                 </form>
             </div>
+        </section>
+    </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title">Maria Eduarda Dantas</h3>
+          <p class="footer-text">
+            Transformando dados em insights e criando soluções de automação que impulsionam resultados.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/DantinhasMD" target="_blank" rel="noopener noreferrer" class="social-icon github">
+              <span class="sr-only">GitHub</span>
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/eduarda-dantas-6834012a9/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin">
+              <span class="sr-only">LinkedIn</span>
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.tiktok.com/@mariacoding?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="social-icon tiktok">
+              <span class="sr-only">TikTok</span>
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/mariadantas.__/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer"  class="social-icon instagram">
+              <span class="sr-only">Instagram</span>
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
-    </section>
+        
+        <div>
+          <h3 class="footer-title">Links Rápidos</h3>
+          <div class="footer-links">
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="footer-link">Início</a>
+              </li>
+              <li>
+                <a href="pages/about.html" class="footer-link">Sobre</a>
+              </li>
+              <li>
+                <a href="pages/skills.html" class="footer-link">Habilidades</a>
+              </li>
+            </ul>
+            <ul class="space-y-2">
+              <li>
+                <a href="pages/projects.html" class="footer-link">Projetos</a>
+              </li>
+              <li>
+                <a href="pages/services.html" class="footer-link">Serviços</a>
+              </li>
+              <li>
+                <a href="pages/contact.html" class="footer-link">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Entre em Contato</h3>
+          <p class="footer-text">
+            Interessado em colaborar ou saber mais?
+          </p>
+          <a href="pages/contact.html" class="footer-button">
+            Envie uma mensagem
+          </a>
+          <p class="footer-text mt-4">
+            Email: eduarda.codedeveloper@gmail.com
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-border">
+        <p>&copy; <span id="current-year"></span> Maria Eduarda Dantas. Todos os direitos reservados.</p>
+        <div class="footer-copyright">
+          <span>
+            <code class="font-mono">&lt;/&gt;</code> com 💖 e <code class="font-mono">{}</code>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!---->
+
     <script src="script.js"></script>
 </body>
 </html>
