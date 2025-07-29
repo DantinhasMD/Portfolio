@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Pessoais - Eduarda Dantas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h2><a href="index.html">Eduarda Dantas</a></h2>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="projects-personal.html" class="nav-link active">Projetos Pessoais</a>
+                    <a href="projects-real.html" class="nav-link">Projetos Reais</a>
+                    <a href="contact.html" class="nav-link">Contato</a>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Projetos Pessoais</h1>
+                    <p class="section-subtitle">Explore meus projetos pessoais e experimentos tecnológicos</p>
+                </div>
+                
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="project-search" 
+                        placeholder="Buscar por tecnologia (React, Node.js, Python...)"
+                        class="search-input"
+                    >
+                    <div class="search-tags">
+                        <span class="search-tag" data-tag="sql">MariaDB</span>
+                        <span class="search-tag" data-tag="nodejs">Node.js</span>
+                        <span class="search-tag" data-tag="python">Python</span>
+                        <span class="search-tag" data-tag="pwa">PWA</span>
+                        <span class="search-tag" data-tag="ai">IA</span>
+                        <span class="search-tag" data-tag="all">Todos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <div class="container">
+                <div class="projects-container" id="projects-container">
+                    <!-- TaskFlow App -->
+                    <article class="project-card" data-tags="react nodejs">
+                        <div class="project-media">
+                            <div class="video-container">
+                                <video controls poster="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800">
+                                    <source src="#" type="video/mp4">
+                                    Demonstração do TaskFlow App
+                                </video>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">TaskFlow - Gerenciador de Tarefas</h3>
+                            <p class="project-description">
+                                Aplicação full stack para gerenciamento de tarefas com interface intuitiva, 
+                                drag & drop, categorização e sincronização em tempo real.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Socket.io</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>Ver Demo</span>
+                                    <span class="link-icon">↗</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <span>Código</span>
+                                    <span class="link-icon">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- AI Assistant -->
+                    <article class="project-card" data-tags="python ai">
+                        <div class="project-media">
+                            <div class="video-container">
+                                <video controls poster="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800">
+                                    <source src="#" type="video/mp4">
+                                    Demonstração do AI Assistant
+                                </video>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Assistant - Chatbot Inteligente</h3>
+                            <p class="project-description">
+                                Assistente virtual com processamento de linguagem natural, capaz de 
+                                responder perguntas complexas e executar tarefas automatizadas.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">NLP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>Ver Demo</span>
+                                    <span class="link-icon">↗</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <span>Código</span>
+                                    <span class="link-icon">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- E-commerce Mobile -->
+                    <article class="project-card" data-tags="mobile react">
+                        <div class="project-media">
+                            <div class="video-container">
+                                <video controls poster="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800">
+                                    <source src="#" type="video/mp4">
+                                    Demonstração do E-commerce Mobile
+                                </video>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">ShopApp - E-commerce Mobile</h3>
+                            <p class="project-description">
+                                Aplicativo mobile completo de e-commerce com carrinho de compras, 
+                                pagamentos integrados e sistema de avaliações.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Stripe</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>Ver Demo</span>
+                                    <span class="link-icon">↗</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <span>Código</span>
+                                    <span class="link-icon">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Analytics Dashboard -->
+                    <article class="project-card" data-tags="react nodejs">
+                        <div class="project-media">
+                            <div class="video-container">
+                                <video controls poster="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800">
+                                    <source src="#" type="video/mp4">
+                                    Demonstração do Analytics Dashboard
+                                </video>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">DataViz - Dashboard Analytics</h3>
+                            <p class="project-description">
+                                Dashboard interativo para visualização de dados com gráficos dinâmicos, 
+                                filtros avançados e relatórios personalizáveis.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>Ver Demo</span>
+                                    <span class="link-icon">↗</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <span>Código</span>
+                                    <span class="link-icon">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <h3>Nenhum projeto encontrado</h3>
+                        <p>Tente buscar por outras tecnologias ou clique em "Todos" para ver todos os projetos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>Gostou dos projetos?</h3>
+                    <p>Vamos conversar sobre como posso ajudar no seu próximo projeto.</p>
+                </div>
+                <div class="footer-cta">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        Entre em Contato
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

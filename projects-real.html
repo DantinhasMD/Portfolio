@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Reais - Eduarda Dantas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h2><a href="index.html">Eduarda Dantas</a></h2>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="projects-personal.html" class="nav-link">Projetos Pessoais</a>
+                    <a href="projects-real.html" class="nav-link active">Projetos Reais</a>
+                    <a href="contact.html" class="nav-link">Contato</a>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Projetos Reais</h1>
+                    <p class="section-subtitle">Soluções desenvolvidas para empresas e clientes reais</p>
+                </div>
+                
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="project-search" 
+                        placeholder="Buscar por setor (fintech, saúde, educação...)"
+                        class="search-input"
+                    >
+                    <div class="search-tags">
+                        <span class="search-tag" data-tag="fintech">Fintech</span>
+                        <span class="search-tag" data-tag="saude">Saúde</span>
+                        <span class="search-tag" data-tag="educacao">Educação</span>
+                        <span class="search-tag" data-tag="ecommerce">E-commerce</span>
+                        <span class="search-tag" data-tag="startup">Startup</span>
+                        <span class="search-tag" data-tag="all">Todos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <div class="container">
+                <div class="projects-container" id="projects-container">
+                    <!-- FinanceHub -->
+                    <article class="project-card" data-tags="fintech">
+                        <div class="project-media">
+                            <div class="video-container">
+                                <video controls poster="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800">
+                                    <source src="#" type="video/mp4">
+                                    Demonstração do FinanceHub
+                                </video>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-badge">Fintech</div>
+                            <h3 class="project-title">FinanceHub - Plataforma de Investimentos</h3>
+                            <p class="project-description">
+                                Plataforma completa para gestão de investimentos com dashboard em tempo real, 
+                                análise de carteiras e integração com APIs do mercado financeiro.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <span class="impact-number">R$ 2M+</span>
+                                    <span class="impact-label">Volume gerenciado</span>
+                                </div>
+                                <div class="impact-item">
+                                    <span class="impact-number">1,200+</span>
+                                    <span class="impact-label">Usuários ativos</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link confidential">
+                                    <span>Projeto Confidencial</span>
+                                    <span class="lock-icon">🔒</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MedConnect -->
+                    <article class="project-card" data-tags="saude">
+                        <div class="project-media">
+                            <div class="video-container">
+                                <video controls poster="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800">
+                                    <source src="#" type="video/mp4">
+                                    Demonstração do MedConnect
+                                </video>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-badge">Saúde</div>
+                            <h3 class="project-title">MedConnect - Telemedicina</h3>
+                            <p class="project-description">
+                                Sistema de telemedicina com agendamento de consultas, prontuário eletrônico, 
+                                videochamadas e prescrições digitais para clínicas médicas.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">WebRTC</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <span class="impact-number">5,000+</span>
+                                    <span class="impact-label">Consultas realizadas</span>
+                                </div>
+                                <div class="impact-item">
+                                    <span class="impact-number">15</span>
+                                    <span class="impact-label">Clínicas conectadas</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>Case Study</span>
+                                    <span class="link-icon">📄</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- EduTech Platform -->
+                    <article class="project-card" data-tags="educacao">
+                        <div class="project-media">
+                            <div class="video-container">
+                                <video controls poster="https://images.pexels.com/photos/3861943/pexels-photo-3861943.jpeg?auto=compress&cs=tinysrgb&w=800">
+                                    <source src="#" type="video/mp4">
+                                    Demonstração da EduTech Platform
+                                </video>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-badge">Educação</div>
+                            <h3 class="project-title">EduTech - Plataforma de Ensino</h3>
+                            <p class="project-description">
+                                Plataforma educacional completa com videoaulas, exercícios interativos, 
+                                gamificação e sistema de acompanhamento de progresso.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <span class="impact-number">10,000+</span>
+                                    <span class="impact-label">Alunos cadastrados</span>
+                                </div>
+                                <div class="impact-item">
+                                    <span class="impact-number">95%</span>
+                                    <span class="impact-label">Taxa de aprovação</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>Acessar Plataforma</span>
+                                    <span class="link-icon">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MarketPlace Pro -->
+                    <article class="project-card" data-tags="ecommerce startup">
+                        <div class="project-media">
+                            <div class="video-container">
+                                <video controls poster="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800">
+                                    <source src="#" type="video/mp4">
+                                    Demonstração do MarketPlace Pro
+                                </video>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-badge">E-commerce</div>
+                            <h3 class="project-title">MarketPlace Pro - Multi-vendor</h3>
+                            <p class="project-description">
+                                Marketplace multi-vendor com sistema de pagamentos, logística integrada,
+                                dashboard para vendedores e app mobile para compradores.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <span class="impact-number">R$ 500K+</span>
+                                    <span class="impact-label">GMV mensal</span>
+                                </div>
+                                <div class="impact-item">
+                                    <span class="impact-number">200+</span>
+                                    <span class="impact-label">Vendedores ativos</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>Ver Marketplace</span>
+                                    <span class="link-icon">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <h3>Nenhum projeto encontrado</h3>
+                        <p>Tente buscar por outros setores ou clique em "Todos" para ver todos os projetos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>Interessado em uma parceria?</h3>
+                    <p>Estou disponível para novos projetos e desafios empresariais.</p>
+                </div>
+                <div class="footer-cta">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        Entre em Contato
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

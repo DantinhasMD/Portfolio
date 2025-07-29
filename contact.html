@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Eduarda Dantas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h2><a href="index.html">Eduarda Dantas</a></h2>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="projects-personal.html" class="nav-link">Projetos Pessoais</a>
+                    <a href="projects-real.html" class="nav-link">Projetos Reais</a>
+                    <a href="contact.html" class="nav-link active">Contato</a>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Vamos Conversar</h1>
+                    <p class="section-subtitle">
+                        Estou aberta a diversos tipos de projetos na área. Entre em contato e vamos conversar sobre como podemos trabalhar!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-intro">
+                            <h2>Como posso ajudar você?</h2>
+                            <p>
+                                Quer seja para um projeto freelance, oportunidade de trabalho 
+                                ou apenas para trocar ideias sobre tecnologia, adoraria conversar com você!
+                            </p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-info">
+                                    <h3>Email</h3>
+                                    <p>eduarda.codedeveloper@email.com</p>
+                                    <span class="response-time">Respondo em até 24h</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">💼</div>
+                                <div class="method-info">
+                                    <h3>LinkedIn</h3>
+                                    <p>www.linkedin.com/in/eduarda-dantas-6834012a9/</p>
+                                    <span class="response-time">Rede profissional</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">🐙</div>
+                                <div class="method-info">
+                                    <h3>GitHub</h3>
+                                    <p>github.com/DantinhasMD</p>
+                                    <span class="response-time">Códigos e projetos</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">📱</div>
+                                <div class="method-info">
+                                    <h3>WhatsApp</h3>
+                                    <p>+55 (19) 99999-9999</p>
+                                    <span class="response-time">Chat rápido</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="availability">
+                            <h3>Disponibilidade</h3>
+                            <div class="availability-status">
+                                <span class="status-indicator available"></span>
+                                <span>Disponível para novos projetos</span>
+                            </div>
+                            <p>Atualmente tenho disponibilidade para projetos de curto, médio e longo prazo.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nome completo</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Empresa (opcional)</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-type">Tipo de projeto</label>
+                                <select id="project-type" name="project-type" required>
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="freelance">Projeto Freelance</option>
+                                    <option value="fulltime">Oportunidade Full-time</option>
+                                    <option value="consulting">Consultoria</option>
+                                    <option value="partnership">Parceria</option>
+                                    <option value="other">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">Orçamento (opcional)</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Prefiro não informar</option>
+                                    <option value="under-5k">Até R$ 5.000</option>
+                                    <option value="5k-15k">R$ 5.000 - R$ 15.000</option>
+                                    <option value="15k-30k">R$ 15.000 - R$ 30.000</option>
+                                    <option value="30k-plus">Acima de R$ 30.000</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="timeline">Prazo desejado</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Selecione o prazo</option>
+                                    <option value="urgent">Urgente (1-2 semanas)</option>
+                                    <option value="short">Curto prazo (1 mês)</option>
+                                    <option value="medium">Médio prazo (2-3 meses)</option>
+                                    <option value="long">Longo prazo (3+ meses)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Conte-me sobre seu projeto</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Descreva seu projeto, objetivos, tecnologias desejadas..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large">
+                                Enviar Mensagem
+                                <span class="btn-icon">→</span>
+                            </button>
+                        </form>
+
+                        <div class="form-success" id="form-success" style="display: none;">
+                            <div class="success-icon">✓</div>
+                            <h3>Mensagem enviada com sucesso!</h3>
+                            <p>Obrigada pelo contato. Responderei em breve!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Prefere uma conversa rápida?</h2>
+                    <p>Está com pressa? Me chame no WhatsApp para uma conversa direta.</p>
+                    <a href="https://wa.me/5519988177644" class="btn btn-outline btn-large" target="_blank">
+                        <span>💬</span>
+                        Chamar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eduarda Dantas. Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/eduarda-dantas-6834012a9/" class="social-link">LinkedIn</a>
+                    <a href="https://github.com/DantinhasMD" class="social-link">GitHub</a>
+                    <a href="https://www.tiktok.com/@mariacoding?is_from_webapp=1&sender_device=pc" class="social-link">Tiktok</a>
+                    <a href="https://www.instagram.com/mariadantas.__/?utm_source=ig_web_button_share_sheet" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

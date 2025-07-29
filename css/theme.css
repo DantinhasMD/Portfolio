@@ -1,0 +1,270 @@
+/* Light Theme (Default) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --border-color: rgba(59, 130, 246, 0.1);
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --header-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-color: rgba(148, 163, 184, 0.2);
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.4);
+    --header-bg: rgba(15, 23, 42, 0.95);
+}
+
+/* Apply theme variables */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.header {
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link {
+    color: var(--text-secondary);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #3b82f6;
+}
+
+.hero-title {
+    color: var(--text-primary);
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+}
+
+.profile-card {
+    background: linear-gradient(135deg, #3b82f6, #1e40af);;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+}
+
+.profile-info h3 {
+    color: #ffffff;
+}
+
+.profile-info p {
+    color: #fff;
+}
+
+.section-title {
+    color: var(--text-primary);
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+}
+
+.about-text p {
+    color: var(--text-secondary);
+}
+
+.stat {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+}
+
+.stat p {
+    color: var(--text-secondary);
+}
+
+.skills {
+    background: var(--bg-secondary);
+}
+
+.skill-category {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+}
+
+.skill-category h3 {
+    color: var(--text-primary);
+}
+
+.search-input {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.project-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+}
+
+.project-title {
+    color: var(--text-primary);
+}
+
+.project-description {
+    color: var(--text-secondary);
+}
+
+.project-impact {
+    background: var(--bg-secondary);
+}
+
+.impact-label {
+    color: var(--text-secondary);
+}
+
+.contact-method {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+}
+
+.method-info h3 {
+    color: var(--text-primary);
+}
+
+.response-time {
+    color: var(--text-secondary);
+}
+
+.availability {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+}
+
+.availability h3 {
+    color: var(--text-primary);
+}
+
+.availability p {
+    color: var(--text-secondary);
+}
+
+.contact-form-container {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+}
+
+.form-group label {
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-success h3 {
+    color: var(--text-primary);
+}
+
+.form-success p {
+    color: var(--text-secondary);
+}
+
+.contact-cta {
+    background: var(--bg-secondary);
+}
+
+.cta-content h2 {
+    color: var(--text-primary);
+}
+
+.cta-content p {
+    color: var(--text-secondary);
+}
+
+.no-results-content h3 {
+    color: var(--text-secondary);
+}
+
+.no-results-content p {
+    color: var(--text-muted);
+}
+
+.contact-intro h2 {
+    color: var(--text-primary);
+}
+
+.contact-intro p {
+    color: var(--text-secondary);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .theme-toggle .theme-icon {
+    content: "☀️";
+}
+
+/* Smooth transitions for theme changes */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark theme specific adjustments */
+[data-theme="dark"] .nav-brand h2 {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    border-color: #60a5fa;
+    background: rgba(96, 165, 250, 0.1);
+}
+
+[data-theme="dark"] .mobile-menu-toggle span {
+    background: var(--text-secondary);
+}
+
+[data-theme="dark"] .search-input:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group select:focus,
+[data-theme="dark"] .form-group textarea:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+/* Additional dark theme enhancements */
+[data-theme="dark"] .project-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .profile-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
