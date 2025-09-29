@@ -1,4 +1,4 @@
-// Mobile Menu Toggle
+// Menu Mobile
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.getElementById('mobile-menu');
     const navMenu = document.querySelector('.nav-menu');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close mobile menu when clicking on nav links
+    // Abre/fecha menu mobile
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scroll for anchor links
+    // Rolagem para links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Header scroll effect
+    // Esconder/Mostrar cabeçalho para rodar
     const header = document.querySelector('.header');
     let lastScrollTop = 0;
     
@@ -49,16 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
+            // Scrolling down - esconde
             header.style.transform = 'translateY(-100%)';
         } else {
-            // Scrolling up
+            // Scrolling up - mostra
             header.style.transform = 'translateY(0)';
         }
         
         lastScrollTop = scrollTop;
         
-        // Add backdrop blur effect
+        // Sombra no cabeçalho
         if (scrollTop > 50) {
             header.classList.add('scrolled');
         } else {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Intersection Observer for animations
+    // Animaçoes
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         videoObserver.observe(video);
     });
 
-    // Add typing effect to hero title (only on home page)
+    // Efieto no título
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle && window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
         const text = heroTitle.innerHTML;
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (i < text.length) {
                 heroTitle.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, 50);
+                setTimeout(typeWriter, 30);
             }
         };
         
