@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
         
-        setTimeout(typeWriter, 0);
+        typeWriter();
     }
 
     // Performance optimization: Debounce scroll events
