@@ -380,7 +380,9 @@ body {
 .skill-category h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1e293b;
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin: 0;
 }
 
@@ -389,17 +391,6 @@ body {
     flex-wrap: wrap;
     gap: 0.5rem;
 }
-
-.skill-tag {
-    background: linear-gradient(135deg, #3b82f6, #1e40af);;
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 1rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
 /* Projects */
 .projects-hero {
     padding: 8rem 0 3rem;
