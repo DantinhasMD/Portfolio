@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (i < text.length) {
                 heroTitle.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, 60);
+                setTimeout(typeWriter, 40);
             }
         };
         
