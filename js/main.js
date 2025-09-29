@@ -131,11 +131,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (i < text.length) {
                 heroTitle.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, 0);
+                setTimeout(typeWriter, 10);
             }
         };
         
-        setTimeout(typeWriter, 500);
+        setTimeout(typeWriter, 0);
     }
 
     // Performance optimization: Debounce scroll events
