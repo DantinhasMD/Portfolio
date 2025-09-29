@@ -99,10 +99,6 @@ body {
     box-shadow: var(--shadow-light);
 }
 
-.skill-category h3 {
-    color: var(--text-primary);
-}
-
 .search-input {
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
