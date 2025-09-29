@@ -380,9 +380,7 @@ body {
 .skill-category h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #3b82f6
     margin: 0;
 }
 
