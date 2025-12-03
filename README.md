@@ -1,4 +1,4 @@
-🎯 Bem-vinda! Eu sou **Maria Eduarda (“Dantinhas”)**, engenheira de software com foco em automações, DevOps e integração de sistemas.
+🎯 Bem-vinda! Eu sou **Maria Eduarda Dantas**, engenheira de software com foco em automações, DevOps e integração de sistemas.
 
 ---
 
